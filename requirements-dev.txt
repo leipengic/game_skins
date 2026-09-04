@@ -1,0 +1,9 @@
+# 开发依赖（lint / test）
+-r requirements.txt
+
+pytest>=7.4.0
+pytest-cov>=4.1.0
+flake8>=6.1.0
+mypy>=1.5.0
+black>=23.10.0
+isort>=5.12.0

@@ -1,0 +1,8 @@
+# 游戏皮肤批量下载 — 运行时依赖
+# Python >= 3.8
+# 注：原 KPL_skin 的 fake_useragent 仍保留为可选依赖（库不可用时自动回退 Chrome UA）
+
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+fake-useragent>=1.4.0  # 可选；缺失时 _common.headers 自动回退 DEFAULT_CHROME_UA

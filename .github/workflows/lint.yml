@@ -1,0 +1,27 @@
+name: lint
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  flake8:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+      - name: flake8
+        run: flake8 _common lol kpl overwatch tests --max-line-length=100 --extend-ignore=E203,W503
+      - name: pytest
+        run: pytest tests/ -v

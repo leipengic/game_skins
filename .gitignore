@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# 测试 / 覆盖率
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 产物（皮肤图片）
+kpl/skins/
+lol/lol_skins/
+overwatch/wallpapers/
+overwatch/skins/
+*/downloads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+
+# Env / Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
